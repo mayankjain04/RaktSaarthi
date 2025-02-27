@@ -1,0 +1,96 @@
+{
+  "hospitals": [
+    {
+      "name": "Late Shri Mukeshbai Patel Blood Bank",
+      "address": "1st Floor, Agrasen Patpedhi, Maharaja Complex, Shirpur, Dhule, Maharashtra, 425405",
+      "district": "Dhule",
+      "contact": ["8180062242", "9823142895", "8421756756"],
+      "email": "bb_shirpur@yahoo.com",
+      "open_hours": "9:00 AM - 5:00 PM",
+      "services": ["Whole Blood Donation", "Blood Component Separation"],
+      "notes": "Located in the heart of Shirpur, easily accessible for donors.",
+      "status": "active"
+    },
+    {
+      "name": "Jeevan Jyoti Blood Bank",
+      "address": "3017, Old Agra Road, Molviganj, Dhule, Maharashtra, 424001",
+      "district": "Dhule",
+      "contact": ["02562-232807"],
+      "email": "jeevanjyoti_dhule@example.com",
+      "open_hours": "9:00 AM - 6:00 PM",
+      "services": ["Whole Blood Donation", "Apheresis Procedures"],
+      "notes": "Approximately 50 km from Shirpur; offers a range of blood donation services.",
+      "status": "active"
+    },
+    {
+      "name": "Jawahar Medical Foundation Blood Bank",
+      "address": "Sakri Road, Rasakar Nagar, Morane, Dhule, Maharashtra, 424001",
+      "district": "Dhule",
+      "contact": ["02562-276317"],
+      "email": "jawahar_bloodbank@example.com",
+      "open_hours": "8:00 AM - 4:00 PM",
+      "services": ["Whole Blood Donation"],
+      "notes": "Renowned for its efficient blood donation drives and camps.",
+      "status": "inactive"
+    },
+    {
+      "name": "Jankalyan Rakta Pedhi",
+      "address": "1st Floor, Vivekanand Hospital, Desaipura, Nandurbar, Maharashtra, 425412",
+      "district": "Nandurbar",
+      "contact": ["02564-226934"],
+      "email": "jankalyan_bloodbank@example.com",
+      "open_hours": "10:00 AM - 5:00 PM",
+      "services": ["Whole Blood Donation", "Platelet Donation"],
+      "notes": "Located approximately 70 km from Shirpur; serves the Nandurbar district.",
+      "status": "active"
+    },
+    {
+      "name": "Civil Hospital Blood Centre",
+      "address": "Railway Station Road, Civil Hospital Compound, Sakri Road, Near Collector Office, Nandurbar, Maharashtra, 425412",
+      "district": "Nandurbar",
+      "contact": ["02564-226225"],
+      "email": "civilhospital_bloodcentre@example.com",
+      "open_hours": "24 Hours",
+      "services": ["Whole Blood Donation", "Emergency Blood Services"],
+      "notes": "Operates round the clock; caters to emergency blood requirements.",
+      "status": "active"
+    },
+    {
+      "name": "LifeLine Blood Bank",
+      "address": "123 Health Street, Nashik, Maharashtra, 422001",
+      "district": "Nashik",
+      "contact": ["0253-1234567", "9876543210"],
+      "email": "lifeline_nashik@example.com",
+      "open_hours": "8:00 AM - 8:00 PM",
+      "services": ["Whole Blood Donation", "Plasma Donation"],
+      "notes": "One of the largest blood banks in Nashik, equipped with modern facilities.",
+      "status": "active"
+    },
+    {
+      "name": "Red Cross Blood Bank",
+      "address": "456 Charity Road, Pune, Maharashtra, 411001",
+      "district": "Pune",
+      "contact": ["020-9876543"],
+      "email": "redcross_pune@example.com",
+      "open_hours": "10:00 AM - 6:00 PM",
+      "services": [
+        "Whole Blood Donation",
+        "Platelet Donation",
+        "Blood Testing"
+      ],
+      "notes": "Affiliated with the Indian Red Cross Society; offers comprehensive blood services.",
+      "status": "active"
+    },
+    {
+      "name": "Sahyadri Blood Bank",
+      "address": "789 Hilltop Avenue, Kolhapur, Maharashtra, 416001",
+      "district": "Kolhapur",
+      "contact": ["0231-1122334"],
+      "email": "sahyadri_kolhapur@example.com",
+      "open_hours": "9:00 AM - 7:00 PM",
+      "services": ["Whole Blood Donation", "Blood Storage", "Donor Camps"],
+      "notes": "Located in the heart of Kolhapur; known for its donor-friendly services.",
+      "status": "active"
+    }
+  ]
+}

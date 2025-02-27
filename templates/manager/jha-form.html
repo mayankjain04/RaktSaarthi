@@ -1,0 +1,135 @@
+{% extends "manager/layout.html" %}
+{% load static %}
+
+{% block title %}
+Blood Donation
+{% endblock %}
+
+{% block script %}
+<link rel="stylesheet" href="{% static 'blood-donation.css' %}">
+<style>
+    .blood-donation-body {
+        background: url("/static/images/blood_donation_bg.jpg") no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        /* background: url("/static/images/blood_donation_bg.jpg") no-repeat; */
+        background-size: cover;
+        background-position: center;
+
+
+    }
+</style>
+{% endblock %}
+
+{% block main %}
+<div class="blood-donation-body">
+    <header class="blood-donation-header blood-donation-margin">
+        <h2 class="blood-donation-logo">Blood Donation</h2>
+        <nav class="blood-donation-navigation">
+            <button class="blood-donation-btn-toggle">BECOME A DONOR</button>
+        </nav>
+    </header>
+    <div class="d-flex align-items-center justify-content-center">
+        <div class="blood-donation-wrapper blood-donation-margin">
+            <div class="blood-donation-icon-close">&times;</div>
+
+            <!-- Donor Form -->
+            <div class="blood-donation-form-box blood-donation-visible">
+                <h2>Donor Form</h2>
+                <form action="{% url 'donor' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="blood-donation-input-box">
+                        <label>Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="blood-donation-input-box">
+                        <label>Medical History</label>
+                        <input type="text" name="medical_history" required>
+                    </div>
+                    <div class="blood-donation-input-box">
+                        <label>Blood Group</label>
+                        <select name="blood_group" required>
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                        </select>
+                    </div>
+                    <div class="blood-donation-input-box">
+                        <label>Location</label>
+                        <input type="text" name="location" required>
+                    </div>
+                    <div class="blood-donation-input-box">
+                        <label>Availability Status</label>
+                        <select name="availability_status" required>
+                            <option>Available</option>
+                            <option>Not Available</option>
+                        </select>
+                    </div>
+                    <div class="blood-donation-input-box">
+                        <label>Last Donation Date</label>
+                        <input type="date" name="last_donation_date">
+                    </div>
+                    <button type="submit" class="blood-donation-btn">Submit</button>
+                    <div class="toggle-form">
+                        <p>Need Blood? <a href="#" class="recipient-link">Click Here</a></p>
+                    </div>
+                </form>
+
+            </div>
+
+            <!-- Recipient Form -->
+            <div class="blood-donation-form-box blood-donation-recipient">
+                <h2>Recipient Form</h2>
+                <form action="{% url 'recipient' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="blood-donation-input-box">
+                        <label>Name</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="blood-donation-input-box">
+                        <label>Urgency Level</label>
+                        <select name="urgency_level" required>
+                            <option>Emergency</option>
+                            <option>Within 24 Hours</option>
+                            <option>Within a Week</option>
+                        </select>
+                    </div>
+                    <div class="blood-donation-input-box">
+                        <label>Location</label>
+                        <input type="text" name="location" required>
+                    </div>
+                    <div class="blood-donation-input-box">
+                        <label>Blood Type Required</label>
+                        <select name="blood_type_required" required>
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="blood-donation-btn">Submit</button>
+                    <div class="toggle-form">
+                        <p>Want to Donate? <a href="#" class="donor-link">Click Here</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block scripttag %}
+<script src="{% static 'blood-donation.js' %}"></script>
+{% endblock %}

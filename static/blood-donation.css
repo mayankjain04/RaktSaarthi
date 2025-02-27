@@ -1,0 +1,144 @@
+/* blood-donation.css */
+
+.blood-donation * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.blood-donation-margin {
+    margin-top: 50px;
+}
+
+.blood-donation-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: url("/static/images/blood_donation_bg.jpg") no-repeat; */
+    background-size: cover;
+    background-position: center;
+}
+
+.blood-donation-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.blood-donation-logo {
+    font-size: 1.8em;
+    color: rgb(239, 12, 12);
+}
+
+.blood-donation-navigation .blood-donation-btn-toggle {
+    background: transparent;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.blood-donation-navigation .blood-donation-btn-toggle:hover {
+    background: crimson;
+    color: white;
+}
+
+.blood-donation-wrapper {
+    /* display: solid; */
+    position: relative;
+    width: 400px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    text-align: center;
+    transition: 0.5s ease;
+}
+
+.blood-donation-icon-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.blood-donation-input-box {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.blood-donation-input-box label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.blood-donation-input-box input,
+.blood-donation-input-box select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.blood-donation-btn {
+    width: 100%;
+    padding: 10px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.blood-donation-toggle-form p {
+    margin-top: 15px;
+}
+
+.blood-donation-toggle-form a {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blood-donation-toggle-form a:hover {
+    text-decoration: underline;
+}
+
+.blood-donation-recipient {
+    display: none;
+}
+
+/* Add animation styles */
+.blood-donation-form-box {
+    opacity: 1;
+    transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
+}
+
+.blood-donation-hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.blood-donation-visible {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+    pointer-events: all;
+}

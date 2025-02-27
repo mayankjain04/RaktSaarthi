@@ -1,0 +1,16 @@
+{% extends "manager/layout.html" %}
+{% load static %}
+
+{% block title %}
+Success
+{% endblock %}
+
+{% block main %}
+<div class="d-flex align-items-center justify-content-center" style="height: 80vh;">
+    <div class="text-center">
+        <h2 class="text-success">Form Submitted Successfully!</h2>
+        <p>Thank you for your submission. We will process your request soon.</p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Go Back to Home</a>
+    </div>
+</div>
+{% endblock %}

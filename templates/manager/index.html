@@ -1,0 +1,238 @@
+{% extends 'manager/layout.html' %}
+
+{% block title %}
+Project RaktSaarthi
+{% endblock %}
+
+{% load static %}
+
+{% block script %}
+<style>
+  /* CSS styles */
+
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe5e5;
+    /* light gray background */
+  }
+
+  .header {
+    background-color: transparent;
+    /* blue header */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s;
+    /* add animation to header */
+  }
+
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff35;
+    padding: 20px;
+    margin: 20px;
+    width: 350px;
+    height: 450px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.07);
+    transition: transform 0.5s;
+    /* add transition to box */
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .box h2 {
+    color: #0d7438;
+    /* green headings */
+  }
+
+  .box p {
+    color: #000000;
+    /* dark gray text */
+  }
+
+  .box img {
+    border: 1px solid #ccc;
+    /* light gray border around images */
+    border-radius: 10px;
+  }
+
+  /* Add some colors to the boxes */
+  .box:nth-child(1) {
+    background-color: hsla(0, 0%, 100%, 0.444);
+    /* light pink background for blood donation awareness */
+  }
+
+  .box:nth-child(2) {
+    background-color: #e6ffe6;
+    /* light green background for blood donation centers */
+  }
+
+  .box:nth-child(3) {
+    background-color: #c7e6ff;
+    /* light blue background for blood donation events */
+  }
+
+  /* Additional styles for a more attractive design */
+  .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  .box h2::after {
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 2px;
+    background-color: #2ecc71;
+    margin: 10px auto;
+  }
+
+  /* Add animation to boxes */
+  .box {
+    animation: fadeIn 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* add animation to boxes */
+  }
+
+  /* Define animation keyframes */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+        /* Button Styling */
+        .btn, .btn-green , .btn-blue{
+        display: inline-block;
+        background-color: #e74c3c;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.5s ease;
+      }
+
+      .btn:hover {
+        background-color: #c0392b;
+      }
+      .btn-blue:hover {
+        background-color: rgb(9, 122, 221);
+      }
+      .btn-green:hover {
+        background-color: #06c706;
+      }
+</style>
+{% endblock %}
+
+{% block main %}
+
+<div class="background">
+  <video autoplay muted loop id="background-video">
+  <source src="{% static 'videos/live-bg.mp4' %}" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<div class="header margin-upper z-up">
+  <h2 class="deep-red">रक्तसारथी - Your own Blood Donation Saarthi</h2>
+</div>
+<div class="content z-up">
+  <div class="d-flex flex-row">
+    <div class="d-flex">
+      <a id="random-article" href="https://healthmatters.nyp.org/the-surprising-benefits-of-donating-blood/"
+      target="_blank">
+        <div class="box text-center">
+          <h2>Blood Donation Awareness</h2>
+          <p>Learn about the importance of blood donation and how it saves lives. Join us in spreading awareness!</p>
+          <div class="image-container">
+            <img src="https://www.postcourier.com.pg/wp-content/uploads/2017/09/TopStories_11_jBloodDonation.jpg" alt=""
+              width="250" height="150">
+          </div>
+        </div>
+      </a>
+
+      <a href="/hospitals/">
+        <div class="box  text-center">
+          <h2>Find Blood Donation Centers</h2>
+          <p>Locate nearby blood donation centers and schedule your appointment to donate blood easily.</p>
+          <div class="image-container">
+            <img src="https://www.shutterstock.com/image-vector/world-blood-donor-day-typography-600nw-1989968462.jpg"
+              alt="" width="250" height="150">
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="d-flex flex-row">
+      <a href="#">
+        <div class="box text-center">
+          <div class="">
+            <h2>AI-Driven Matchmaking</h2>
+          </div>
+          <div>
+            <p>Advanced AI algorithms now connect blood donors with recipients in real-time.</p>
+          </div>
+          <div class="image-container">
+            <img src="{% static 'images/ai-blood.webp' %}" alt="" width="250" height="150">
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+
+{% endblock %}
+
+{% block scripttag %}
+<!-- <script>
+  function displayRandomArticle() {
+    fetch("{% static 'articles.json' %}")
+      .then(response => response.json())
+      .then(data => {
+        if (data.length > 0) {
+          setTimeout(() => { // Add a slight delay
+            const randomArticle = data[Math.floor(Math.random() * data.length)];
+            const linkElement = document.getElementById('random-article');
+            linkElement.href = randomArticle.url;
+          }, 500); // 500ms buffer time
+        }
+      })
+      .catch(error => console.error('Error fetching articles:', error));
+  }
+
+  window.onload = () => {
+    setTimeout(displayRandomArticle, 300); // Delay execution to ensure the DOM is ready
+  };
+</script> -->
+{% endblock %}
+
+{% block footer %}
+Project RaktSaarthi
+{% endblock %}
